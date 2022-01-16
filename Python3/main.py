@@ -1,0 +1,10 @@
+a = int(input("Denklemin a sayısı: "))
+b = int(input("Denklemin b sayısı: "))
+c = int(input("Denklemin c sayısı:  "))
+delta = b**2 - 4*a*c
+kök1 = (-b + delta**1/2)/2*a
+kök2 = (-b - delta**1/2)/2*a
+print(f"Denklemin 1. kökü = {kök1}")
+print(f"Denklemin 2. kökü = {kök2}")
+print(f"Kökler toplamı = {b//a}")
+print(f"Kökler çarpımı = {c//a}")

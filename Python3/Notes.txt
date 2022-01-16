@@ -1,0 +1,2 @@
+\n alt satıra geçmek için kullanılır: print("hello world\n merhaba dünya")
+

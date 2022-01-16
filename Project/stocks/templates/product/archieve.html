@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{ year }} yılı {{ month }}. ay ürün arşiv sayfası
+    <p>ürün arşiv sayfası</p>
+    {% if products %}
+        <table>
+            {% for product in products  %}
+                <tr>
+                    <td> <a href="{% url 'product-detail' product.id %}"> Ürün Adı:</a></td><td>{{ product.name|upper }}</td>
+                    <td>Ürünün içeriği:</td><td>{{ product.content }}</td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% else %}
+        aradığınız kriterlere göre ürün bulunamadı.
+        2021 yılı 12.ay arşivleri için <a href="{% url 'product-archieve' 2021 12 %}"> Tıklayın </a>
+    {% endif %}
+    
+</body>
+</html>
